@@ -25,8 +25,8 @@ function HeroSection() {
                 endTrigger: contentContainerRef.current,
                 end: "bottom bottom",
                 scrub: 1,
-                markers: true,
                 pin: phoneContainer,
+                invalidateOnRefresh: true,
             },
         })
         phoneMoveTl.to(phoneContainer, {

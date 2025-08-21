@@ -23,11 +23,16 @@
 }
 .logo-description {
     font-family: var(--rr-font);
-    font-size: clamp(1.2rem, 1.089rem + 0.56vw, 2.2rem);
+    font-size: clamp(1.2rem, 1.022rem + 0.89vw, 2.8rem);
 }
 
 
 /* Sections */
+.section-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
 .section-title-text {
     font-family: var(--rr-bold-font);
     font-size: clamp(1.5rem, 1.222rem + 1.39vw, 4rem);
@@ -36,4 +41,6 @@
 .section-description-text {
     font-family: var(--faberge-font);
     font-size: clamp(1rem, 0.889rem + 0.56vw, 2rem);
+    text-wrap: balance;
+    line-height: 1.1;
 }

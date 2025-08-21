@@ -1,0 +1,11 @@
+.about-content-container {
+    height: 50vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5em 0;
+}
+
+.about-text-container {
+    width: 40vw;
+}
