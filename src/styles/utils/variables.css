@@ -1,0 +1,13 @@
+:root {
+    /* Цвета */
+    --bg: #ffffff;
+
+    /* Радиусы */
+    --border-radius: 4px;
+    --two-border-radius: 16px;
+
+    /*  Шрифты  */
+    --faberge-font: "Faberge", "Helvetica", "Roboto Regular", sans-serif;
+    --rr-bold-font: "RoadRadio Bold" ,"Helvetica", sans-serif;
+    --rr-font: "RoadRadio" ,"Helvetica", sans-serif;
+}

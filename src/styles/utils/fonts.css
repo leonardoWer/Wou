@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Faberge";
+    src: url("/fonts/faberge.ttf");
+}
+
+@font-face {
+    font-family: "RoadRadio Bold";
+    src: url("/fonts/road_radio__bold.ttf");
+}
+
+@font-face {
+    font-family: "RoadRadio";
+    src: url("/fonts/road_radio.ttf");
+}
