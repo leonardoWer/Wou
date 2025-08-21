@@ -1,5 +1,5 @@
 .plans-content-container {
-    height: 500vh;
+    height: 400vh;
     overflow: hidden;
 }
 
@@ -60,7 +60,7 @@
     width: 60%;
     max-width: 1000px;
     height: 100%;
-    background: var(--dark-gray);
+    background: var(--light-gray__dark-gray);
     border-radius: var(--two-border-radius);
     position: relative;
     overflow: hidden;

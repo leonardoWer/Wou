@@ -5,6 +5,8 @@
     --light-gray: #f5f4f7;
     --dark-gray: #a1a0a2;
 
+    --light-gray__dark-gray: var(--light-gray);
+
     --blue: #2962ff;
     --blue-dark: #0D36A6;
 
@@ -25,4 +27,6 @@
     --primary-text-color: white;
     --light-gray: #999999;
     --dark-gray: #222222;
+
+    --light-gray__dark-gray: var(--dark-gray);
 }
