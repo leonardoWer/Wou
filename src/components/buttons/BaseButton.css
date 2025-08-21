@@ -1,0 +1,19 @@
+.base-button {
+    color: var(--primary-text-color);
+    border-radius: var(--two-border-radius);
+    padding: 0.8em 2em;
+    font-size: clamp(0.8rem, 0.733rem + 0.33vw, 1.4rem);
+}
+
+.base-button.bg {
+    background: var(--dark-gray);
+}
+.base-button.blue-bg {
+    background: var(--blue);
+    color: white;
+}
+
+.base-button.no-bg {
+    background: transparent;
+    border: 1px solid var(--dark-gray);
+}

@@ -1,7 +1,12 @@
 :root {
     /* Цвета */
-    --bg: white;
+    --bg-color: white;
     --primary-text-color: black;
+    --light-gray: #f5f4f7;
+    --dark-gray: #a1a0a2;
+
+    --blue: #2962ff;
+    --blue-dark: #0D36A6;
 
     /* Радиусы */
     --border-radius: 4px;
@@ -14,6 +19,8 @@
 }
 
 .dark-theme {
-    --bg: black;
+    --bg-color: black;
     --primary-text-color: white;
+    --light-gray: #999999;
+    --dark-gray: #222222;
 }
