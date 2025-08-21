@@ -16,6 +16,8 @@
     --faberge-font: "Faberge", "Helvetica", "Roboto Regular", sans-serif;
     --rr-bold-font: "RoadRadio Bold" ,"Helvetica", sans-serif;
     --rr-font: "RoadRadio" ,"Helvetica", sans-serif;
+
+    --max-width: 1900px;
 }
 
 .dark-theme {

@@ -1,16 +1,30 @@
 .top-menu {
-    position: fixed;
+    width: 100%;
     height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-menu__inner {
+    position: fixed;
     width: 100%;
     padding: 0.4em 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1900px;
 }
-
-.top-menu__left, .top-menu center, .top-menu__right {
+.top-menu__left, .top-menu__right {
+    width: 20%;
+}
+.top-menu__left, .top-menu__center, .top-menu__right {
     height: 100%;
 }
+.top-menu__center {
+    flex: 0 0 1;
+}
+
 .top-menu__logo {
     width: 3.5em;
     height: 100%;
@@ -19,9 +33,6 @@
 }
 
 
-.top-menu center {
-    flex: 1;
-}
 .nav-list {
     display: flex;
     align-items: center;
@@ -32,6 +43,7 @@
 .nav-list__item {
     cursor: pointer;
 }
+
 
 .top-menu__right {
     display: flex;

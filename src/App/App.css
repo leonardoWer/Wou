@@ -1,0 +1,39 @@
+/* Content */
+.content-container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+}
+
+.spacer {
+    height: 100vh;
+    background: darkolivegreen;
+}
+
+
+/* Logo */
+.logo-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    align-items: flex-start;
+}
+.logo-title {
+    font-family: var(--faberge-font);
+    font-size: clamp(2rem, 1.778rem + 1.11vw, 4rem);
+}
+.logo-description {
+    font-family: var(--rr-font);
+    font-size: clamp(1.2rem, 1.089rem + 0.56vw, 2.2rem);
+}
+
+
+/* Sections */
+.section-title-text {
+    font-family: var(--rr-bold-font);
+    font-size: clamp(1.5rem, 1.222rem + 1.39vw, 4rem);
+}
+
+.section-description-text {
+    font-family: var(--faberge-font);
+    font-size: clamp(1rem, 0.889rem + 0.56vw, 2rem);
+}

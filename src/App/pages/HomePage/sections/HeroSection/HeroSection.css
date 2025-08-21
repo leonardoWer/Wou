@@ -1,0 +1,35 @@
+.hero-content-container {
+    height: 200vh;
+}
+
+.hero__top {
+    height: 40vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.hero-logo-horizontal {
+    width: 40vw;
+}
+
+.hero-phone-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.hero__phone-container {
+    margin-top: -18em;
+    width: 40vw;
+    aspect-ratio: 3 / 5;
+    position: relative;
+    transform: perspective(600px);
+}
+.hero__phone {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}

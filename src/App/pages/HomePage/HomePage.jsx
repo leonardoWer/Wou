@@ -5,6 +5,7 @@ function HomePage() {
     return (
         <div>
             <HeroSection />
+            <div className="spacer"></div>
         </div>
     )
 }

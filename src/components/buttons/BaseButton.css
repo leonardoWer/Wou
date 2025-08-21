@@ -1,8 +1,8 @@
 .base-button {
     color: var(--primary-text-color);
     border-radius: var(--two-border-radius);
-    padding: 0.8em 2em;
-    font-size: clamp(0.8rem, 0.733rem + 0.33vw, 1.4rem);
+    padding: 0.8em 1.8em;
+    font-size: clamp(0.8rem, 0.744rem + 0.28vw, 1.3rem);
 }
 
 .base-button.bg {
