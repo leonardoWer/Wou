@@ -40,9 +40,9 @@ function HeroSection() {
                 ease: "power2.inOut"
             }, "2.5")
 
-        return () => (
+        return (() => {
             phoneMoveTl.kill()
-        )
+        })
     }, []);
 
     return (

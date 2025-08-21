@@ -1,0 +1,78 @@
+.sport-content-container {
+    height: 500vh;
+}
+
+.sport__top-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10em;
+}
+
+.sport__text-container {
+    width: 60vh;
+}
+.sport-text-container__first-line {
+    display: flex;
+    align-items: center;
+}
+.first-line__title {
+    font-family: var(--rr-bold-font);
+    font-size: clamp(3rem, 2.667rem + 1.67vw, 6rem);
+}
+.first-line__description {
+    margin-left: 0.4em;
+    white-space: nowrap;
+}
+.first-line__description, .another-lines__description {
+    font-size: clamp(1.6rem, 1.444rem + 0.78vw, 3rem);
+}
+
+
+
+.sport__phones-content-container {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+.sport__phones-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.8em;
+    position: absolute;
+    top: 0;
+    left: 30%;
+}
+.sport-phone {
+    height: 100%;
+    aspect-ratio: 3 / 5;
+    flex-shrink: 0;
+    object-position: center;
+    object-fit: contain;
+}
+
+.sport-phones-container__text-container {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.8em;
+}
+.s-p-c-text-container__title {
+    font-family: var(--rr-bold-font);
+    font-size: clamp(1.5rem, 1.222rem + 1.39vw, 4rem);
+}
+.s-p-c-text-container__description {
+    font-size: clamp(1.2rem, 1.022rem + 0.89vw, 2.8rem);
+}

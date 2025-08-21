@@ -40,7 +40,7 @@
 
 .section-description-text {
     font-family: var(--faberge-font);
-    font-size: clamp(1rem, 0.889rem + 0.56vw, 2rem);
+    font-size: clamp(1.2rem, 1.022rem + 0.89vw, 2.8rem);
     text-wrap: balance;
-    line-height: 1.1;
+    line-height: 1.2;
 }
