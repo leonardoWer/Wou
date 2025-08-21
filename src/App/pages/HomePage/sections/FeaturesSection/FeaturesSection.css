@@ -1,6 +1,7 @@
 .features-content-container {
     height: 500vh;
     overflow: hidden;
+    margin-top: 20vh;
 }
 
 .features__top {
@@ -25,14 +26,14 @@
     white-space: nowrap;
 }
 .features-line__icon {
-    width: 1.5em;
+    width: 1.2em;
     height: auto;
     margin: 0 0.4em;
     display: inline-block;
     vertical-align: middle;
 }
 .features-line__icon[data-scale] {
-    scale: 1.2;
+    scale: 1.5;
 }
 
 
@@ -45,6 +46,7 @@
 
 .features-top__grid {
     height: 80%;
+    width: 80%;
     max-width: 1600px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -57,15 +59,30 @@
 .features__img-container, .features__title-container, .features__description-container {
     background: var(--light-gray__dark-gray);
     border-radius: var(--two-border-radius);
+    position: relative;
 }
 .features__img-container {
     grid-area: phone;
 }
-
 .features__title-container {
     grid-area: title;
 }
-
 .features__description-container {
     grid-area: description;
+}
+
+.features__img-wrapper, .features-title-container__content-container, .features-description-container__text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+}
+
+.features__img-wrapper {
+    overflow: hidden;
+}
+.features__img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
