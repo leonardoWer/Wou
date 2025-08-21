@@ -1,7 +1,7 @@
 /* Общие параметры */
 body {
-    font-family: var(--inter-regular-font);
-    background-color: var(--light-bg);
+    font-family: var(--faberge-font);
+    background-color: var(--bg-color);
 }
 
 

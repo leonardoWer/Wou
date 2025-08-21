@@ -1,5 +1,8 @@
+import "s/styles/main.css";
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import {ThemeProvider} from "s/providers/ThemeProvider.jsx";
 import App from './App.jsx'
 
 import gsap from "gsap";
@@ -10,6 +13,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+      <ThemeProvider>
+          <App />
+      </ThemeProvider>
   </StrictMode>,
 )

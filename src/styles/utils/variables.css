@@ -1,6 +1,7 @@
 :root {
     /* Цвета */
-    --bg: #ffffff;
+    --bg: white;
+    --primary-text-color: black;
 
     /* Радиусы */
     --border-radius: 4px;
@@ -10,4 +11,9 @@
     --faberge-font: "Faberge", "Helvetica", "Roboto Regular", sans-serif;
     --rr-bold-font: "RoadRadio Bold" ,"Helvetica", sans-serif;
     --rr-font: "RoadRadio" ,"Helvetica", sans-serif;
+}
+
+.dark-theme {
+    --bg: black;
+    --primary-text-color: white;
 }
