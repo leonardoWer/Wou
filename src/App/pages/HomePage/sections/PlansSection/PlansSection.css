@@ -1,0 +1,109 @@
+.plans-content-container {
+    height: 500vh;
+    overflow: hidden;
+}
+
+.plans-top-container {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+}
+
+.plans-top__content-container {
+    height: 86vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
+}
+.plans-top-content-container__left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plans-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.plans-menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    padding: 1em 2em;
+    font-size: clamp(1.2rem, 1.089rem + 0.56vw, 2.2rem);
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+}
+.plans-menu__item.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+.plans-menu-item__icon {
+    height: 1.5em;
+    width: 1.5em;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+
+.plans-top-content-container__right {
+    width: 60%;
+    max-width: 1000px;
+    height: 100%;
+    background: var(--dark-gray);
+    border-radius: var(--two-border-radius);
+    position: relative;
+    overflow: hidden;
+}
+.p-t-c-container-right__item {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 4% 0;
+}
+.p-t-c-container-right-item__title {
+    font-family: var(--rr-bold-font);
+    font-size: clamp(2rem, 1.778rem + 1.11vw, 4rem);
+    margin-left: 4%;
+}
+.p-t-c-container-right-item__img-container {
+    width: 90%;
+    height: 60%;
+    border-radius: var(--two-border-radius);
+    flex: 0 0 1;
+    background: var(--bg-color);
+    align-self: center;
+}
+.p-t-c-container-right-item__img-container-wrapper {
+    width: 100%;
+    height: 95%;
+    transform: perspective(600px) rotateY(-15deg) rotateX(10deg);
+    margin-top: -5%;
+    position: relative;
+    z-index: 10;
+}
+.p-t-c-container-right-item__img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.p-t-c-container-right-item__description {
+    font-size: clamp(1.2rem, 1.089rem + 0.56vw, 2.2rem);
+    margin-left: 4%;
+}

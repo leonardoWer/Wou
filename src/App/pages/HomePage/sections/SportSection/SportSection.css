@@ -11,9 +11,6 @@
     gap: 10em;
 }
 
-.sport__text-container {
-    width: 60vh;
-}
 .sport-text-container__first-line {
     display: flex;
     align-items: center;

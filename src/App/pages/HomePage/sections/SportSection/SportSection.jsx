@@ -113,7 +113,7 @@ function SportSection() {
             })
                 .to(phoneText, {
                     ...(i === phoneTextContainers.length - 1 ? {} : fadeOut), // Применяем fadeOut ко всем, кроме последнего
-                }, "+=0.5");
+                }, "+=0.4");
 
             tl.add(phoneTextTl)
         })
@@ -132,7 +132,7 @@ function SportSection() {
 
                 <div className="sport__top-container"
                     ref={topContainerRef}>
-                    <div className="sport__text-container">
+                    <div className="section-text-container">
                         <div className="sport-text-container__first-line">
                             <h4 className="first-line__title">Wou</h4>
                             <span className="first-line__description">
