@@ -1,4 +1,5 @@
 .top-menu {
+    position: fixed;
     width: 100%;
     height: 70px;
     display: flex;
@@ -8,7 +9,6 @@
 }
 
 .top-menu__inner {
-    position: fixed;
     width: 100%;
     padding: 0.4em 1em;
     display: flex;

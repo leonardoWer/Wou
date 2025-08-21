@@ -86,7 +86,7 @@
     height: 60%;
     border-radius: var(--two-border-radius);
     flex: 0 0 1;
-    background: var(--bg-color);
+    background: var(--bg__light-gray);
     align-self: center;
 }
 .p-t-c-container-right-item__img-container-wrapper {
