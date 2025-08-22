@@ -1,13 +1,22 @@
 import "./TransitionSection.css"
 
-import {useRef, useEffect} from "react";
+import {useRef, useEffect, use} from "react";
 
 import gsap from "gsap"
 import TextPlugin from "gsap/TextPlugin";
+
 gsap.registerPlugin(TextPlugin);
 
 function TransitionSection() {
+    return (
+        <section id="transitionSection">
+            <MoveText/>
+            <VerticalPhones/>
+        </section>
+    )
+}
 
+const MoveText = () => {
     const rightTextData = [
         "Приложение, сделанное с любовью к спорту",
         "Рекорды начинаются здесь",
@@ -58,23 +67,93 @@ function TransitionSection() {
     }, [])
 
     return (
-        <section id="transitionSection">
-            <div className="transition-container"
-                ref={containerRef}>
-                <div className="transition__left"
-                    ref={leftContainerRef}>
-                    Wou
-                </div>
-
-                <div className="transition__right"
-                     ref={rightContainerRef}>
-                    <p className="transition-right__text"
-                        ref={rightTextRef}>
-                        {rightTextData[0]}
-                    </p>
-                </div>
+        <div className="transition-container"
+             ref={containerRef}>
+            <div className="transition__left"
+                 ref={leftContainerRef}>
+                Wou
             </div>
-        </section>
+
+            <div className="transition__right"
+                 ref={rightContainerRef}>
+                <p className="transition-right__text"
+                   ref={rightTextRef}>
+                    {rightTextData[0]}
+                </p>
+            </div>
+        </div>
+    )
+}
+
+const VerticalPhones = () => {
+
+    const imgData = [
+        "img/pages_mobile/home-page.png",
+        "img/pages_mobile/calendar.png",
+        "img/pages_mobile/tabata.png",
+    ]
+
+    const containerRef = useRef(null);
+    const imgWrappersDataRef= useRef([]);
+
+    useEffect(() => {
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: containerRef.current,
+                start: "20% 80%",
+                end: "bottom+=10% bottom",
+                scrub: 0.5,
+            }
+        })
+
+        imgWrappersDataRef.current.forEach((item, index) => {
+
+            const indexCoef = index * 5;
+            const indexCoefForAll = (5 - (index + 1)) * 1.5;
+
+            tl.to(item, {
+                y: `${-indexCoef * 2.5}vh`,
+                rotateX: `+=${indexCoefForAll - indexCoef}`,
+                rotateY: `+=${indexCoefForAll + indexCoef}`,
+                rotateZ: `+=${-indexCoefForAll - indexCoef / 2}`,
+            }, "<")
+        })
+
+        return (() => {
+            tl.kill()
+        })
+
+    }, []);
+
+    return (
+        <div className="vertical-phones-container"
+            ref={containerRef}>
+            {imgData.map((item, index) => {
+
+                const indexCoef = index * 5
+
+                return (
+                    <div className="vertical-phone__wrapper"
+                         key={index}
+                         ref={(el) => (imgWrappersDataRef.current[index] = el)}
+                         style={{
+                             zIndex: imgData.length - index,
+                             top: `${index * 35}vh`,
+                             transform: `
+                        perspective(1000px)
+                        rotateX(${40 + indexCoef}deg)
+                        rotateY(${-4 - indexCoef / 2}deg)
+                        rotateZ(${40 - indexCoef}deg)
+                    `,}}>
+                        <img src={item}
+                             alt={"vertical-phone__" + index}
+                             className="vertical-phone__img"/>
+                    </div>
+                )
+
+            })}
+        </div>
     )
 }
 
