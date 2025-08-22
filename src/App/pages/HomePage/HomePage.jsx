@@ -3,6 +3,8 @@ import AboutSection from "s/App/pages/HomePage/sections/AboutSection/AboutSectio
 import SportSection from "s/App/pages/HomePage/sections/SportSection/SportSection.jsx";
 import PlansSection from "s/App/pages/HomePage/sections/PlansSection/PlansSection.jsx";
 import FeaturesSection from "s/App/pages/HomePage/sections/FeaturesSection/FeaturesSection.jsx";
+import TransitionSection from "s/App/pages/HomePage/sections/TransitionSection/TransitionSection.jsx";
+import Footer from "s/App/pages/HomePage/sections/Footer/Footer.jsx";
 
 function HomePage() {
     return (
@@ -12,6 +14,8 @@ function HomePage() {
             <SportSection />
             <PlansSection />
             <FeaturesSection />
+            <TransitionSection/>
+            <Footer />
         </div>
     )
 }
