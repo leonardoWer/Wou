@@ -4,121 +4,128 @@ import {useRef} from "react";
 function FeaturesSection() {
 
     // TODO: add actual photo and icons
-    const featuresData = [
-        {
-            title: "Челленджи",
-            description: "Лорем 40",
-            img: "img/pages_mobile/challenges.png",
-            icon: "img/icons/challenges_icon.png",
-        },
-        {
-            title: "Цель",
-            description: "Задайте себе цель, которая будет мотивировать вас на главном экране. " +
-            "Это дополнительный инструмент для отслеживания прогресса",
-            img: "img/pages_mobile/challenges.png",
-            icon: "img/icons/challenges_icon.png",
-        },
-        {
-            title: "Персонализация",
-            description: "Подстраивайте под себя каждый элемент: " +
-            "Тему, уведомления, напоминания о тренировках",
-            img: "img/pages_mobile/challenges.png",
-            icon: "img/icons/challenges_icon.png",
-        },
-    ]
+    const challengesData ={
+        title: "Челленджи",
+        description: "Выполняйте задания с нарастающим уровнем сложности и получайте уникальные достижения",
+        img: "img/pages_mobile/challenges.png",
+    };
+
+    const purposeData = {
+        title: "Цель",
+        description: "Установите конкретную цель, которая будет мотивировать на главном экране",
+        img: "img/pages_mobile/challenges.png",
+    };
+
+    const achievementsData = {
+        title: "Достижения и персонализация",
+        description: "Настраивайте каждый элемент приложения под себя",
+        img: [
+            "img/icons/ruby_plank_achievement.png",
+            "img/icons/ruby_plank_achievement.png",
+            "img/icons/ruby_plank_achievement.png",
+            "img/icons/ruby_plank_achievement.png",
+            "img/icons/ruby_plank_achievement.png",
+            "img/icons/ruby_plank_achievement.png",
+        ],
+    };
 
     const contentContainerRef = useRef(null);
-    const topContainerRef = useRef(null);
     const gridContainerContainerRef = useRef(null);
 
-    const imgElementsDataRef = useRef([]);
-    const titleTextElementsDataRef = useRef([]);
-    const titleIconElementsDataRef = useRef([]);
-    const descriptionElementsDataRef = useRef([]);
+    const gridContainersRef = useRef([]);
 
 
     return (
         <section id="featuresSection">
             <div className="features-content-container"
             ref={contentContainerRef}>
-                <div className="features__top"
-                ref={topContainerRef}>
 
-                    <div className="features__text-container">
-                        <div className="features-text-container__line">
-                            <span className="features-line__text">
-                                Приложение
-                            </span>
-                            <img src="img/icons/ruby_plank_achievement.png" alt="inline-icon" className="features-line__icon" data-scale/>
-                            <span className="features-line__text">
-                                наполненное
-                            </span>
-                        </div>
-                        <div className="features-text-container__line">
-                            <img src="img/icons/records_icon.png" alt="inline-icon" className="features-line__icon"/>
-                            <span className="features-line__text">
-                                Полезными функциями
-                            </span>
-                            <img src="img/icons/workouts_plan_icon.png" alt="inline-icon" className="features-line__icon"/>
-                        </div>
-                        <div className="features-text-container__line">
-                            <span className="features-line__text">
-                                Которые делают
-                            </span>
-                            <img src="logo/logo-bg.svg" alt="inline-icon" className="features-line__icon"/>
-                            <span className="features-line__text">
-                                Разницу
-                            </span>
-                        </div>
+                <div className="features__text-container">
+                    <div className="features-text-container__line">
+                        <span className="features-line__text">
+                            Приложение
+                        </span>
+                        <img src="img/icons/ruby_plank_achievement.png" alt="inline-icon" className="features-line__icon" data-scale/>
+                        <span className="features-line__text">
+                            наполненное
+                        </span>
                     </div>
+                    <div className="features-text-container__line">
+                        <img src="img/icons/records_icon.png" alt="inline-icon" className="features-line__icon"/>
+                        <span className="features-line__text">
+                            Полезными функциями
+                        </span>
+                        <img src="img/icons/workouts_plan_icon.png" alt="inline-icon" className="features-line__icon"/>
+                    </div>
+                    <div className="features-text-container__line">
+                        <span className="features-line__text">
+                            Которые делают
+                        </span>
+                        <img src="logo/logo-bg.svg" alt="inline-icon" className="features-line__icon"/>
+                        <span className="features-line__text">
+                            Разницу
+                        </span>
+                    </div>
+                </div>
 
-                    <div className="features-top__content-container"
+                <div className="features-top__content-container"
                     ref={gridContainerContainerRef}>
 
-                        <div className="features-top__grid">
+                    <div className="features__grid">
 
-                            <div className="features__img-container">
-                                {featuresData.map((item, index) => (
-                                    <div className="features__img-wrapper"
-                                         key={index}
-                                         ref={(el) => imgElementsDataRef.current[index] = el}>
-                                        <img src={item.img} alt={item.title + " screenshot"}/>
-                                    </div>
-                                ))}
+                        <div className="features__img-container"
+                            ref={(el) => gridContainersRef[0] = el}>
+                            <div className="features__img-wrapper">
+                                <img src={challengesData.img} alt={challengesData.title + " screenshot"}/>
                             </div>
 
-                            <div className="features__title-container">
-                                {featuresData.map((item, index) => (
-                                    <div className="features-title-container__content-container"
-                                        key={index}>
-                                        <img src={item.icon}
-                                             alt={item.title + " icon"}
-                                             className="features-title-container__icon"
-                                             ref={(el) => titleIconElementsDataRef.current[index] = el}/>
-
-                                        <h4 className="features-title-container__title"
-                                            ref={(el) => titleTextElementsDataRef.current[index] = el}>
-                                            {item.title}
-                                        </h4>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="features__description-container">
-                                {featuresData.map((item, index) => (
-                                    <p className="features-description-container__text"
-                                        key={index}
-                                        ref={(el) => descriptionElementsDataRef.current[index] = el}>
-                                        {item.description}
-                                    </p>
-                                ))}
-
+                            <div className="f-i-c__text-container">
+                                <h4 className="features-grid__title">
+                                    {challengesData.title}
+                                </h4>
+                                <p className="features-grid__description">
+                                    {challengesData.description}
+                                </p>
                             </div>
                         </div>
 
+                        <div className="features__purpose-container"
+                             ref={(el) => gridContainersRef[1] = el}>
+
+                            <div className="f-i-c__text-container">
+                                <h4 className="features-grid__title">
+                                    {purposeData.title}
+                                </h4>
+                                <p className="features-grid__description">
+                                    {purposeData.description}
+                                </p>
+                            </div>
+
+                            <img src={purposeData.img} alt={purposeData.title + " screenshot"}/>
+                        </div>
+
+                        <div className="features__achievements-container"
+                             ref={(el) => gridContainersRef[2] = el}>
+                            <h4 className="features-grid__title">
+                                {achievementsData.title}
+                            </h4>
+                            <div className="f-a-c__achievements-grid">
+                                {achievementsData.img.map((achievement, i) => (
+                                    <img src={achievement}
+                                         alt={achievementsData.title + " icon " + i}
+                                         className="f-a-c__achievement-img"
+                                         key={i}
+                                    />
+                                ))}
+                            </div>
+                            <p className="features-grid__description">
+                                {achievementsData.description}
+                            </p>
+                        </div>
                     </div>
 
                 </div>
+
             </div>
         </section>
     )
