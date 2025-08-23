@@ -28,7 +28,6 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    max-width: var(--max-width);
 }
 .footer__logo-container {
     width: 4em;
@@ -48,4 +47,5 @@
 }
 .footer-list__item {
     font-size: clamp(1.4rem, 1.356rem + 0.22vw, 1.8rem);
+    cursor: pointer;
 }

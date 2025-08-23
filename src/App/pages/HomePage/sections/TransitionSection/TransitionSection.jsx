@@ -88,8 +88,8 @@ const MoveText = () => {
 const VerticalPhones = () => {
 
     const imgData = [
-        "img/pages_mobile/home-page.png",
-        "img/pages_mobile/calendar.png",
+        "img/pages_mobile/settings_light-dark.png",
+        "img/pages_mobile/workouts.png",
         "img/pages_mobile/tabata.png",
     ]
 

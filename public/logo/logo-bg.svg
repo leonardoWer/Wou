@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
   <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
-    <g fill="var(--bg-color)">
+    <g fill="currentColor">
       <polygon points="355 276.7 355 266.7 254.2 266.7 153.5 266.7 154.2 276.1 154.8 285.6 255 286.3 355 286.7 355 276.7"/>
       <polygon points="109.3 206.8 109.7 276.1 110.3 345.5 123 345.5 135.8 345.5 136.4 276.1 136.8 206.8 123 206.8 109.3 206.8"/>
       <path d="M66.9,246.8v37.3c0,20.6.4,38,.8,38.4.4.4,5.7.4,11.7.2l10.8-.9v-75h-23.3Z"/>

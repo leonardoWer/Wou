@@ -11,19 +11,19 @@ function PlansSection() {
         {
             title: "Правильное питание",
             description: "Lorem 1212312 123dsf ssefwe",
-            img: "img/pages_screenshots/recipes.png",
+            img: "img/pages_mobile/diet.png",
             icon: "img/icons/healthy_food_icon.png"
         },
         {
             title: "Мой прогресс",
             description: "Lorem ipsum solom dor 123dsf ssefwe",
-            img: "img/pages_screenshots/recipes.png",
+            img: "img/pages_mobile/progress.png",
             icon: "img/icons/healthy_food_icon.png"
         },
         {
             title: "Рекорды",
             description: "12312 q we edfwe qweqfwe",
-            img: "img/pages_screenshots/recipes.png",
+            img: "img/pages_mobile/records_plus_add-record.png",
             icon: "img/icons/records_icon.png"
         },
     ]

@@ -11,19 +11,8 @@
 
 
 /* Logo */
-.logo-text-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8em;
-    align-items: flex-start;
-}
-.logo-title {
-    font-family: var(--faberge-font);
-    font-size: clamp(2rem, 1.778rem + 1.11vw, 4rem);
-}
-.logo-description {
-    font-family: var(--rr-font);
-    font-size: clamp(1.2rem, 1.022rem + 0.89vw, 2.8rem);
+#logo, #Logo, #Logo-horizontal {
+    color: var(--primary-text-color);
 }
 
 

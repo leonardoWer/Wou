@@ -3,7 +3,6 @@ import {useRef} from "react";
 
 function FeaturesSection() {
 
-    // TODO: add actual photo and icons
     const challengesData ={
         title: "Челленджи",
         description: "Выполняйте задания с нарастающим уровнем сложности и получайте уникальные достижения",
@@ -13,7 +12,7 @@ function FeaturesSection() {
     const purposeData = {
         title: "Цель",
         description: "Установите конкретную цель, которая будет мотивировать на главном экране",
-        img: "img/pages_mobile/challenges.png",
+        img: "img/pages_screenshots/purpose.png",
     };
 
     const achievementsData = {

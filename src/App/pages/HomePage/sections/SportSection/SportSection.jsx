@@ -22,7 +22,7 @@ function SportSection() {
         {
             title: "Тренировки",
             description: "Здесь вы найдёте видео тренировки на разные части тела",
-            img: "img/pages_mobile/tabata.png"
+            img: "img/pages_mobile/workouts.png"
         },
         {
             title: "Табата таймер",
@@ -34,12 +34,12 @@ function SportSection() {
             description: "Создавайте свои планы тренировок: " +
                 "Настривайте их на любое количество дней, чтобы следовать программе, " +
                 "Редактируйте количество повторений или время выполнения упражнения. ",
-            img: "img/pages_mobile/tabata.png"
+            img: "img/pages_mobile/plans.png"
         },
         {
             title: "Календарь тренировок",
             description: "Планируйте тренировки, отмечайте их выполненными, отслеживайте прогресс",
-            img: "img/pages_mobile/tabata.png"
+            img: "img/pages_mobile/calendar.png"
         },
     ];
 
