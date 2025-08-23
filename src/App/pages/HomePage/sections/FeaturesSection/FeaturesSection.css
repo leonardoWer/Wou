@@ -94,6 +94,7 @@
     width: 100%;
     max-height: 20vh;
     object-fit: cover;
+    border-radius: var(--border-radius);
 }
 
 /* Achievements area */

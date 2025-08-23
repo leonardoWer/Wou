@@ -24,8 +24,9 @@ html {
 }
 &::-webkit-scrollbar-thumb {
     background-color: var(--dark-gray);
+    border-radius: var(--border-radius);
     background-clip: content-box;
 }
 &::-webkit-scrollbar-thumb:hover {
-    background-color: var(--light-gray);
+    background-color: var(--blue);
 }
