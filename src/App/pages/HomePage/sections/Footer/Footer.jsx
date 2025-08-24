@@ -5,6 +5,7 @@ import BaseLink from "s/components/links/Link.jsx";
 
 import Logo from "s/assets/logo.svg?react"
 import LogoHorizontal from "s/assets/logo-horizontal.svg?react"
+import {DownloadAppLink} from "s/components/links/DownloadAppLink/DownloadAppLink.jsx";
 
 function Footer() {
     return (
@@ -14,7 +15,7 @@ function Footer() {
                 <LogoHorizontal className="contacts-top__logo"/>
 
                 <div className="contacts-top__button-container">
-                    <BaseButton title="Get app" type={"bg"}/>
+                    <DownloadAppLink children="Get app" type={"bg"}/>
                     <BaseLink children="Our GitHub" onClick={{link: "https://github.com/leonardoWer/Wou-android-app"}} type={"no-bg"}/>
                 </div>
             </div>

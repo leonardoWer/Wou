@@ -49,12 +49,14 @@ function BaseLink({children, onClick, className="base-button ", type="bg"}, ref)
             if (onClick.title) {
                 linkProps.title = onClick.title;
             }
-        } else if (onClick.href) {
+        } else if (onClick.scrollTo) {
             linkProps.href = `#${onClick.href}`;
             linkProps.onClick = handlePageScroll;
         } else if (onClick.page) {
             linkProps.href = `#${onClick.page}`;
             linkProps.onClick = handlePageNavigation;
+        } else if (onClick.href) {
+            linkProps.href = onClick.href;
         }
     } else {
         console.warn("onClick must be an object!")

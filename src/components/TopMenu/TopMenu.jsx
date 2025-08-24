@@ -5,6 +5,7 @@ import {useTheme} from "s/providers/ThemeProvider.jsx";
 import BaseButton from "s/components/buttons/BaseButton.jsx";
 
 import Logo from "s/assets/logo.svg?react"
+import {DownloadAppLink} from "s/components/links/DownloadAppLink/DownloadAppLink.jsx";
 
 function TopMenu() {
     const { theme, toggleTheme } = useTheme();
@@ -25,7 +26,7 @@ function TopMenu() {
                 </div>
 
                 <div className="top-menu__right">
-                    <BaseButton title={"Get App"} type={"blue-bg"}/>
+                    <DownloadAppLink children={"Get App"} type={"blue-bg"}/>
                     <BaseButton title={theme} type={"no-bg"} onClick={toggleTheme} />
                 </div>
             </div>
