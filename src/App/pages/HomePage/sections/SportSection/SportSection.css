@@ -1,14 +1,9 @@
 .sport-content-container {
     height: 500vh;
-}
-
-.sport__top-container {
-    height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10em;
+    overflow: hidden;
 }
 
 .sport-text-container__first-line {
@@ -33,21 +28,21 @@
 
 
 .sport__phones-content-container {
-    width: 100%;
-    height: 60vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
 .sport__phones-container {
-    height: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     gap: 0.8em;
-    position: absolute;
-    top: 0;
-    left: 30%;
+    margin-left: 50vw;
 }
 .sport-phone {
     height: 100%;
@@ -60,7 +55,7 @@
 .sport-phones-container__text-container {
     position: absolute;
     top: 0;
-    right: 25%;
+    right: 30%;
     width: 25vw;
     height: 100%;
     display: flex;

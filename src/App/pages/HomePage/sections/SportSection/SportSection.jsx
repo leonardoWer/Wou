@@ -7,7 +7,6 @@ import gsap from "gsap";
 function SportSection() {
 
     const contentContainer = useRef(null);
-    const topContainerRef = useRef(null);
 
     const phonesContentContainerRef = useRef(null);
     const phonesContainerRef = useRef(null);
@@ -71,12 +70,12 @@ function SportSection() {
 
         const getXValue = () => {
             const left = phonesContainer.getBoundingClientRect().left;
-            return -(phonesContainer.offsetWidth - left * 0.4);
+            return -(phonesContainer.offsetWidth - left);
         }
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: topContainerRef.current,
+                trigger: phonesContentContainerRef.current,
                 start: "bottom bottom",
                 endTrigger: contentContainer.current,
                 end: "bottom bottom",
@@ -132,52 +131,47 @@ function SportSection() {
             <div className="sport-content-container"
                 ref={contentContainer}>
 
-                <div className="sport__top-container"
-                    ref={topContainerRef}>
-                    <div className="section-text-container">
-                        <div className="sport-text-container__first-line">
-                            <h4 className="first-line__title">Wou</h4>
-                            <span className="first-line__description">
-                            - Ваш личный фитнес тренер,
-                        </span>
-                        </div>
-                        <div className="sport-text-container__another-lines">
-                            <p className="another-lines__description">
-                                в котором есть всё, чтобы ваши занятия спортом были регулярными и продуктивными: от гибкого табата-таймера и видеотренировок до персонального календаря занятий
-                            </p>
-                        </div>
+                <div className="section-text-container">
+                    <div className="sport-text-container__first-line">
+                        <h4 className="first-line__title">Wou</h4>
+                        <span className="first-line__description">
+                        - Ваш личный фитнес тренер,
+                    </span>
                     </div>
-
-                    <div className="sport__phones-content-container"
-                         ref={phonesContentContainerRef}>
-
-                        <div className="sport__phones-container"
-                            ref={phonesContainerRef}>
-                            {phonesData.map((phone, index) => (
-                                <img key={index}
-                                     ref={(el) => setPhoneRef(el, index)}
-                                     src={phone.img}
-                                     alt={phone.title + " screenshot"}
-                                     className="sport-phone"/>
-                            ))}
-                        </div>
-
-                        {phonesData.map((phone, index) => (
-                            <div key={index}
-                                 ref={(el) => phoneTextContainersDataRef.current[index] = el}
-                                 className="sport-phones-container__text-container">
-                                <h4 className="s-p-c-text-container__title">
-                                    {phone.title}
-                                </h4>
-                                <p className="s-p-c-text-container__description">
-                                    {phone.description}
-                                </p>
-                            </div>
-                        ))}
-
+                    <div className="sport-text-container__another-lines">
+                        <p className="another-lines__description">
+                            в котором есть всё, чтобы ваши занятия спортом были регулярными и продуктивными: от гибкого табата-таймера и видеотренировок до персонального календаря занятий
+                        </p>
                     </div>
                 </div>
 
+                <div className="sport__phones-content-container"
+                     ref={phonesContentContainerRef}>
+
+                    <div className="sport__phones-container"
+                        ref={phonesContainerRef}>
+                        {phonesData.map((phone, index) => (
+                            <img key={index}
+                                 ref={(el) => setPhoneRef(el, index)}
+                                 src={phone.img}
+                                 alt={phone.title + " screenshot"}
+                                 className="sport-phone"/>
+                        ))}
+                    </div>
+
+                    {phonesData.map((phone, index) => (
+                        <div key={index}
+                             ref={(el) => phoneTextContainersDataRef.current[index] = el}
+                             className="sport-phones-container__text-container">
+                            <h4 className="s-p-c-text-container__title">
+                                {phone.title}
+                            </h4>
+                            <p className="s-p-c-text-container__description">
+                                {phone.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
 
             </div>
         </section>
