@@ -4,6 +4,8 @@ import {useTheme} from "s/providers/ThemeProvider.jsx";
 
 import BaseButton from "s/components/buttons/BaseButton.jsx";
 
+import Logo from "s/assets/logo.svg?react"
+
 function TopMenu() {
     const { theme, toggleTheme } = useTheme();
 
@@ -11,7 +13,7 @@ function TopMenu() {
         <nav className="top-menu">
             <div className="top-menu__inner">
                 <div className="top-menu__left">
-                    <img src="logo/logo.svg" alt="logo" className="top-menu__logo"/>
+                    <Logo className="top-menu__logo"/>
                 </div>
 
                 <div className="top-menu__center">

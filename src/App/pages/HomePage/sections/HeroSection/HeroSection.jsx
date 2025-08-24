@@ -1,9 +1,11 @@
 import "./HeroSection.css"
 
+import React from 'react';
 import {useEffect, useRef} from "react";
 
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+import LogoHorizontal from "s/assets/logo-horizontal.svg?react"
 
 function HeroSection() {
 
@@ -51,7 +53,7 @@ function HeroSection() {
             ref={contentContainerRef}>
 
                 <div className="hero__top">
-                    <img src="logo/logo-horizontal.svg" alt="logo" className="hero-logo-horizontal" />
+                    <LogoHorizontal className="hero-logo-horizontal" />
                 </div>
 
                 <div className="hero-phone-wrapper"

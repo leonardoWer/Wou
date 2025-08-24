@@ -6,6 +6,8 @@ import gsap from "gsap";
 import TextPlugin from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 
+import LogoBg from "s/assets/logo-bg.svg?react"
+
 function FeaturesSection() {
 
     const challengesData ={
@@ -188,9 +190,7 @@ const TextWithInlineImages = () => {
                       ref={(el) => addToRefs(topTextsRefData, el)}
                       data-text="Которые делают">
                 </span>
-                <img src="logo/logo-bg.svg"
-                     alt="inline-icon"
-                     className="features-line__icon"
+                <LogoBg className="features-line__icon"
                      ref={(el) => addToRefs(topImgsRefData, el)}
                 />
                 <span className="features-line__text"

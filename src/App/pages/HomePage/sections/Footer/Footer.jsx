@@ -1,13 +1,17 @@
 import "./Footer.css"
+
 import BaseButton from "s/components/buttons/BaseButton.jsx";
 import BaseLink from "s/components/links/Link.jsx";
+
+import Logo from "s/assets/logo.svg?react"
+import LogoHorizontal from "s/assets/logo-horizontal.svg?react"
 
 function Footer() {
     return (
         <section id="contactsSection">
 
             <div className="contacts__top">
-                <img src="logo/logo-horizontal.svg" alt="logo" className="contacts-top__logo"/>
+                <LogoHorizontal className="contacts-top__logo"/>
 
                 <div className="contacts-top__button-container">
                     <BaseButton title="Get app" type={"bg"}/>
@@ -20,7 +24,7 @@ function Footer() {
                 <div className="footer__top">
 
                     <div className="footer__logo-container">
-                        <img src="logo/logo.svg" alt="logo"/>
+                        <Logo className="footer-logo"/>
 
                         <p className="footer__created-by-text">
                             Created by <a href="http://leonardoWer.github.io">leonardo Wer</a>

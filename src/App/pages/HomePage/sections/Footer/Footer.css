@@ -43,9 +43,10 @@ footer {
     align-items: flex-start;
     justify-content: center;
 }
-.footer__logo-container img {
+.footer-logo, .footer-logo #logo {
     width: 4em;
     height: auto;
+    color: var(--bg-color);
 }
 .footer__created-by-text {
     font-size: clamp(1rem, 0.959rem + 0.2vw, 1.2rem);
