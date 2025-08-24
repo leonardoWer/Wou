@@ -3,17 +3,28 @@
     border-radius: var(--two-border-radius);
     padding: 0.7em 1.5em;
     font-size: clamp(0.8rem, 0.744rem + 0.28vw, 1.3rem);
+    transition: all .4s ease;
 }
 
 .base-button.bg {
     background: var(--dark-gray);
 }
+.base-button.bg:hover {
+    background: var(--light-gray);
+}
+
 .base-button.blue-bg {
     background: var(--blue);
     color: white;
+}
+.base-button.blue-bg:hover {
+    transform: scale(1.02);
 }
 
 .base-button.no-bg {
     background: transparent;
     border: 1px solid var(--dark-gray);
+}
+.base-button.no-bg:hover {
+    background: var(--dark-gray);
 }
