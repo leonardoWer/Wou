@@ -1,5 +1,10 @@
 import "./FeaturesSection.css"
-import {useRef} from "react";
+
+import {useEffect, useRef} from "react";
+
+import gsap from "gsap";
+import TextPlugin from "gsap/TextPlugin";
+gsap.registerPlugin(TextPlugin);
 
 function FeaturesSection() {
 
@@ -30,8 +35,8 @@ function FeaturesSection() {
     };
 
     const contentContainerRef = useRef(null);
-    const gridContainerContainerRef = useRef(null);
 
+    const gridContainerContainerRef = useRef(null);
     const gridContainersRef = useRef([]);
 
 
@@ -40,33 +45,7 @@ function FeaturesSection() {
             <div className="features-content-container"
             ref={contentContainerRef}>
 
-                <div className="features__text-container">
-                    <div className="features-text-container__line">
-                        <span className="features-line__text">
-                            Приложение
-                        </span>
-                        <img src="img/icons/ruby_plank_achievement.png" alt="inline-icon" className="features-line__icon" data-scale/>
-                        <span className="features-line__text">
-                            наполненное
-                        </span>
-                    </div>
-                    <div className="features-text-container__line">
-                        <img src="img/icons/records_icon.png" alt="inline-icon" className="features-line__icon"/>
-                        <span className="features-line__text">
-                            Полезными функциями
-                        </span>
-                        <img src="img/icons/workouts_plan_icon.png" alt="inline-icon" className="features-line__icon"/>
-                    </div>
-                    <div className="features-text-container__line">
-                        <span className="features-line__text">
-                            Которые делают
-                        </span>
-                        <img src="logo/logo-bg.svg" alt="inline-icon" className="features-line__icon"/>
-                        <span className="features-line__text">
-                            Разницу
-                        </span>
-                    </div>
-                </div>
+                <TextWithInlineImages/>
 
                 <div className="features-top__content-container"
                     ref={gridContainerContainerRef}>
@@ -128,6 +107,99 @@ function FeaturesSection() {
 
             </div>
         </section>
+    )
+}
+
+
+const TextWithInlineImages = () => {
+    const textContainerRef = useRef(null);
+    const topTextsRefData = useRef([]);
+    const topImgsRefData = useRef([]);
+
+    // Помощник для добавления refs в массивы
+    const addToRefs = (ref, el) => {
+        if (el && !ref.current.includes(el)) {
+            ref.current.push(el);
+        }
+    };
+
+    useEffect(() => {
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: textContainerRef.current,
+                start: "top 70%",
+                end: "center 40%",
+                duration: 1,
+                scrub: 1,
+            }
+        })
+
+        topTextsRefData.current.forEach((el, index) => {
+            const currentText = el.dataset.text;
+
+            tl.to(el, {
+                    text: currentText
+                }, "<")
+        })
+
+
+        return (() => {
+            tl.kill()
+        })
+
+    }, [])
+
+    return (
+        <div className="features__text-container"
+               ref={textContainerRef}>
+
+            <div className="features-text-container__line">
+                <span className="features-line__text"
+                      ref={(el) => addToRefs(topTextsRefData, el)}
+                      data-text="Приложение">
+                </span>
+                <img src="img/icons/achievements/ruby_plank_achievement.png"
+                     alt="inline-icon"
+                     className="features-line__icon"
+                     data-scale=""
+                     ref={(el) => addToRefs(topImgsRefData, el)}/>
+                <span className="features-line__text"
+                      ref={(el) => addToRefs(topTextsRefData, el)}
+                      data-text="наполненное">
+                </span>
+            </div>
+            <div className="features-text-container__line">
+                <img src="img/icons/records_icon.png"
+                     alt="inline-icon"
+                     className="features-line__icon"
+                     ref={(el) => addToRefs(topImgsRefData, el)}/>
+                <span className="features-line__text"
+                      ref={(el) => addToRefs(topTextsRefData, el)}
+                      data-text="Полезными функциями">
+                </span>
+                <img src="img/icons/workouts_plan_icon.png"
+                     alt="inline-icon"
+                     className="features-line__icon"
+                     ref={(el) => addToRefs(topImgsRefData, el)}/>
+            </div>
+            <div className="features-text-container__line">
+                <span className="features-line__text"
+                      ref={(el) => addToRefs(topTextsRefData, el)}
+                      data-text="Которые делают">
+                </span>
+                <img src="logo/logo-bg.svg"
+                     alt="inline-icon"
+                     className="features-line__icon"
+                     ref={(el) => addToRefs(topImgsRefData, el)}
+                />
+                <span className="features-line__text"
+                      ref={(el) => addToRefs(topTextsRefData, el)}
+                      data-text="Разницу">
+                </span>
+            </div>
+
+        </div>
     )
 }
 

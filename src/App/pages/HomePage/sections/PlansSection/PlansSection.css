@@ -1,19 +1,18 @@
+#plansSection {
+    margin-top: 20vh;
+}
+
 .plans-content-container {
     height: 400vh;
     overflow: hidden;
-}
-
-.plans-top-container {
-    height: 120vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10vh;
 }
 
 .plans-top__content-container {
-    height: 86vh;
+    margin-top: 20vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -55,11 +54,11 @@
 }
 
 
-
 .plans-top-content-container__right {
     width: 60%;
-    max-width: 1000px;
-    height: 100%;
+    height: 80%;
+    max-width: 1100px;
+    padding-right: 5%;
     background: var(--light-gray__dark-gray);
     border-radius: var(--two-border-radius);
     position: relative;

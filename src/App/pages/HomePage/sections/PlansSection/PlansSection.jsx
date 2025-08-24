@@ -143,65 +143,63 @@ function PlansSection() {
         <section id="plansSection">
             <div className="plans-content-container" ref={contentContainerRef}>
 
-                <div className="plans-top-container" ref={topContainerRef}>
-
-                    <div className="section-text-container">
-                        <div className="section-title-text">
-                            Становитесь лучше с Wou
-                        </div>
-                        <div className="section-description-text">
-                            Планируйте диету, отслеживайте прогресс, сохраняйте рекорды.
-                            Всё для того, чтобы становится лучше
-                        </div>
+                <div className="section-text-container">
+                    <div className="section-title-text">
+                        Становитесь лучше с Wou
                     </div>
+                    <div className="section-description-text">
+                        Планируйте диету, отслеживайте прогресс, сохраняйте рекорды.
+                        Всё для того, чтобы становится лучше
+                    </div>
+                </div>
 
-                    <div className="plans-top__content-container">
+                <div className="plans-top__content-container"
+                    ref={topContainerRef}>
 
-                        <div className="plans-top-content-container__left">
-                            <aside className="plans-menu">
-                                {plansData.map((item, index) => (
-                                    <div className={"plans-menu__item"}
-                                         key={index}
-                                         ref={(el) => menuItemsRef.current[index] = el}>
-                                        <img className="plans-menu-item__icon" src={item.icon} alt={item.title + " icon"}/>
-                                        <h4 className="plans-menu-item__title">
-                                            {item.title}
-                                        </h4>
-                                    </div>
-                                ))}
-                            </aside>
-                        </div>
-
-                        <div className="plans-top-content-container__right">
+                    <div className="plans-top-content-container__left">
+                        <aside className="plans-menu">
                             {plansData.map((item, index) => (
-                                <div className={"p-t-c-container-right__item"}
+                                <div className={"plans-menu__item"}
                                      key={index}
-                                     ref={(el) => rightItemsRef.current[index] = el}>
-
-                                    <h2 className="p-t-c-container-right-item__title"
-                                        ref={(el) => titleTextElementsRef.current[index] = el}>
+                                     ref={(el) => menuItemsRef.current[index] = el}>
+                                    <img className="plans-menu-item__icon" src={item.icon} alt={item.title + " icon"}/>
+                                    <h4 className="plans-menu-item__title">
                                         {item.title}
-                                    </h2>
-
-                                    <div className="p-t-c-container-right-item__img-container">
-                                        <div className="p-t-c-container-right-item__img-container-wrapper"
-                                             ref={(el) => imgContainersRef.current[index] = el}>
-                                            <img src={item.img} alt={item.title + " screenshot"}/>
-                                        </div>
-                                    </div>
-
-                                    <p className="p-t-c-container-right-item__description"
-                                        ref={(el) => descrTextElementsRef.current[index] = el}>
-                                        {item.description}
-                                    </p>
+                                    </h4>
                                 </div>
                             ))}
+                        </aside>
+                    </div>
 
-                        </div>
+                    <div className="plans-top-content-container__right">
+                        {plansData.map((item, index) => (
+                            <div className={"p-t-c-container-right__item"}
+                                 key={index}
+                                 ref={(el) => rightItemsRef.current[index] = el}>
+
+                                <h2 className="p-t-c-container-right-item__title"
+                                    ref={(el) => titleTextElementsRef.current[index] = el}>
+                                    {item.title}
+                                </h2>
+
+                                <div className="p-t-c-container-right-item__img-container">
+                                    <div className="p-t-c-container-right-item__img-container-wrapper"
+                                         ref={(el) => imgContainersRef.current[index] = el}>
+                                        <img src={item.img} alt={item.title + " screenshot"}/>
+                                    </div>
+                                </div>
+
+                                <p className="p-t-c-container-right-item__description"
+                                    ref={(el) => descrTextElementsRef.current[index] = el}>
+                                    {item.description}
+                                </p>
+                            </div>
+                        ))}
 
                     </div>
 
                 </div>
+
 
             </div>
         </section>
