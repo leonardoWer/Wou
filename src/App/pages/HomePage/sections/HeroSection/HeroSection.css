@@ -34,3 +34,13 @@
     object-fit: contain;
     object-position: center;
 }
+
+@media (max-width: 780px) {
+    .hero-logo-horizontal {
+        width: 80vw;
+    }
+    .hero__phone-container {
+        margin-top: -10em;
+        width: 90vw;
+    }
+}

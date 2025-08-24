@@ -71,3 +71,28 @@
 .s-p-c-text-container__description {
     font-size: clamp(1.2rem, 1.022rem + 0.89vw, 2.8rem);
 }
+
+@media (max-width: 780px) {
+    .sport-text-container__first-line {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sport__phones-container {
+        height: 60%;
+        margin-left: 100vw;
+    }
+    .sport-phones-container__text-container {
+        top: 0;
+        right: 0;
+        left: 50%;
+        translate: -50% -50%;
+        width: 80vw;
+    }
+}
+
+@media (max-width: 520px) {
+    .sport__phones-container {
+        margin-left: 200vw;
+    }
+}

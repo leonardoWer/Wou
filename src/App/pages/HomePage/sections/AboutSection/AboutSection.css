@@ -6,6 +6,8 @@
     padding-top: 2%;
 }
 
-.about-text-container {
-    width: 40vw;
+@media (max-width: 780px) {
+    .about-text-container {
+        margin-top: 10vh;
+    }
 }

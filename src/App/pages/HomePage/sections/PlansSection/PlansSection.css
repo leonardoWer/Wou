@@ -38,7 +38,7 @@
     justify-content: center;
     gap: 0.4em;
     padding: 1em 2em;
-    font-size: clamp(1.2rem, 1.089rem + 0.56vw, 2.2rem);
+    font-size: clamp(0.8rem, 0.644rem + 0.78vw, 2.2rem);
     opacity: 0.5;
     transition: all 0.2s ease-in-out;
 }
@@ -105,4 +105,29 @@
 .p-t-c-container-right-item__description {
     font-size: clamp(1.2rem, 1.089rem + 0.56vw, 2.2rem);
     margin-left: 4%;
+}
+
+@media (max-width: 780px) {
+    .plans-top__content-container {
+        justify-content: center;
+    }
+    .plans-top__content-container {
+        flex-direction: column;
+    }
+
+    .plans-top-content-container__left {
+        width: 90%;
+        height: fit-content;
+    }
+    .plans-menu {
+        width: 100%;
+        flex-direction: row;
+    }
+    .plans-menu__item {
+
+    }
+
+    .plans-top-content-container__right {
+        width: 100%;
+    }
 }

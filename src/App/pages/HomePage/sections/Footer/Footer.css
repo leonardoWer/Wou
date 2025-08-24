@@ -21,7 +21,6 @@
 
 footer {
     min-height: 35vh;
-    /*background: var(--light-gray__dark-gray);*/
     background: var(--primary-text-color);
     color: var(--bg-color);
     padding: 4em 2em 2em;
@@ -29,6 +28,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 10vh;
 }
 .footer__top {
     width: 100%;
@@ -84,4 +84,20 @@ footer {
     justify-content: space-between;
     max-width: 1280px;
     color: var(--dark-gray);
+}
+
+@media (max-width: 780px) {
+    .contacts-top__logo {
+        width: 90%;
+    }
+    .footer__top {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+    .footer__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1em;
+    }
 }

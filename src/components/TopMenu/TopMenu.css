@@ -53,3 +53,12 @@
     gap: 0.4em;
     padding: 0 0.2em;
 }
+
+@media (max-width: 780px) {
+    .top-menu__logo {
+        width: 2.5em;
+    }
+    .top-menu__left, .top-menu__right {
+        width: fit-content;
+    }
+}

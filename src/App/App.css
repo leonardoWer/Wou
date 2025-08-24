@@ -33,3 +33,9 @@
     text-wrap: balance;
     line-height: 1.2;
 }
+
+@media (max-width: 780px) {
+    .section-text-container {
+        width: 80vw;
+    }
+}

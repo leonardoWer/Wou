@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(2rem, 1.778rem + 1.11vw, 4rem);
+    font-size: clamp(1.2rem, 0.889rem + 1.56vw, 4rem);
 }
 .features-line__text {
     font-family: var(--rr-font);
@@ -34,7 +34,7 @@
 
 
 .features-top__content-container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,4 +126,24 @@
 .features-grid__description {
     font-size: clamp(0.8rem, 0.667rem + 0.67vw, 2rem);
     flex: 0 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .features__grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        height: auto;
+
+        grid-template-areas:
+            "phone"
+            "purpose"
+            "achievements";
+    }
+    .features__img-container {
+        height: 60vh;
+    }
+    .features__img-wrapper {
+        height: 70%;
+    }
+
 }

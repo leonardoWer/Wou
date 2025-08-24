@@ -16,6 +16,7 @@
 .base-button.blue-bg {
     background: var(--blue);
     color: white;
+    white-space: nowrap;
 }
 .base-button.blue-bg:hover {
     transform: scale(1.02);

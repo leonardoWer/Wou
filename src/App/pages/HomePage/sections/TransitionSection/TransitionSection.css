@@ -45,3 +45,10 @@
     display: block;
     object-fit: contain;
 }
+
+
+@media (max-width: 780px) {
+    .transition-container {
+        flex-direction: column;
+    }
+}
