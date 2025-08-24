@@ -39,7 +39,10 @@ function AboutSection() {
                     </div>
                     <div className="section-description-text"
                          ref={descriptionRef}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias blanditiis consectetur, consequuntur dicta dignissimos doloribus eius eos error et itaque laboriosam laborum libero maiores molestiae mollitia nisi obcaecati porro praesentium quaerat quis repudiandae rerum, saepe sapiente temporibus voluptatem voluptatum.
+                        Мы создали приложение, чтобы сделать ваши тренировки максимально эффективными и доступными.
+                        Независимо от вашего уровня подготовки, Wou поможет вам достичь новых высот, установить личные рекорды и полюбить процесс самосовершенствования.
+                        Объединяя удобные инструменты, разнообразный контент и элементы геймификации, мы стремимся вдохновить вас на регулярные
+                        занятия спортом и построение здорового образа жизни.
                     </div>
                 </div>
 

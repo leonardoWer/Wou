@@ -26,6 +26,9 @@
 .first-line__description, .another-lines__description {
     font-size: clamp(1.6rem, 1.444rem + 0.78vw, 3rem);
 }
+.sport-text-container__another-lines {
+    margin-top: -1em;
+}
 
 
 

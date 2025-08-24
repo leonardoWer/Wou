@@ -10,19 +10,26 @@ function PlansSection() {
     const plansData = [
         {
             title: "Правильное питание",
-            description: "Lorem 1212312 123dsf ssefwe",
+            description: "Здоровое тело – это результат не только тренировок, " +
+                "но и сбалансированного питания. " +
+                "Мы предлагаем идеи для завтраков, обедов, ужинов и перекусов, " +
+                "которые помогут вам чувствовать себя энергичнее и поддерживать достигнутые результаты.",
             img: "img/pages_mobile/diet.png",
             icon: "img/icons/healthy_food_icon.png"
         },
         {
             title: "Мой прогресс",
-            description: "Lorem ipsum solom dor 123dsf ssefwe",
+            description: "В Wou построена система прогресса, которая поможет отслеживать свой прогресс, и двигаться вперед, " +
+                "покоряя новые вершины в каждой тренировке. Накапливайте достижения, ставьте личные рекорды и соревнуйтесь с единомышленниками",
             img: "img/pages_mobile/progress.png",
             icon: "img/icons/healthy_food_icon.png"
         },
         {
             title: "Рекорды",
-            description: "12312 q we edfwe qweqfwe",
+            description: "Каждый ваш личный рекорд – это повод для гордости. " +
+                "В этом разделе вы можете фиксировать свои лучшие результаты в любых видах спорта и " +
+                "сортировать их по группам. " +
+                "Wou поможет вам сохранить историю ваших побед и увидеть, как далеко вы продвинулись",
             img: "img/pages_mobile/records_plus_add-record.png",
             icon: "img/icons/records_icon.png"
         },
