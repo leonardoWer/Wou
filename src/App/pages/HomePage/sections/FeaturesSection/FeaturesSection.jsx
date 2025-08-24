@@ -20,12 +20,12 @@ function FeaturesSection() {
         title: "Достижения и персонализация",
         description: "Настраивайте каждый элемент приложения под себя",
         img: [
-            "img/icons/ruby_plank_achievement.png",
-            "img/icons/ruby_plank_achievement.png",
-            "img/icons/ruby_plank_achievement.png",
-            "img/icons/ruby_plank_achievement.png",
-            "img/icons/ruby_plank_achievement.png",
-            "img/icons/ruby_plank_achievement.png",
+            "img/icons/achievements/bronze_plank_achievement.png",
+            "img/icons/achievements/silver_plank_achievement.png",
+            "img/icons/achievements/gold_plank_achievement.png",
+            "img/icons/achievements/diamond_plank_achievement.png",
+            "img/icons/achievements/emerald_plank_achievement.png",
+            "img/icons/achievements/ruby_plank_achievement.png",
         ],
     };
 
