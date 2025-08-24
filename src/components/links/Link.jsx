@@ -1,17 +1,19 @@
+import "s/components/buttons/BaseButton.css"
+
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import gsap from 'gsap';
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
-function BaseLink({children, onClick, className}, ref) {
+function BaseLink({children, onClick, className="base-button ", type="bg"}, ref) {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     let linkProps = {
         className: className ? className : '',
     };
+    type ? linkProps.className += (type) : "";
 
     if (onClick && typeof onClick === 'object') {
 
@@ -36,7 +38,7 @@ function BaseLink({children, onClick, className}, ref) {
 
         const handlePageNavigation = (event) => {
             event.preventDefault();
-            navigate(onClick.page);
+            // navigate(onClick.page);
         }
 
         if (onClick.link) {

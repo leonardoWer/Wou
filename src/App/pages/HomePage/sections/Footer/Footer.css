@@ -3,7 +3,7 @@
 }
 
 .contacts__top {
-    height: 75vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,40 +12,75 @@
 }
 
 .contacts-top__button-container {
-    width: 20%;
-    background: var(--light-gray__dark-gray);
-    padding: 1em 2em;
-    border-radius: var(--two-border-radius);
+    display: flex;
+    gap: 1em;
 }
 .contacts-top__logo {
     width: 50%;
 }
 
-.footer-container {
-    background: var(--light-gray__dark-gray);
-    min-height: 25vh;
-    padding: 2em;
+footer {
+    min-height: 35vh;
+    /*background: var(--light-gray__dark-gray);*/
+    background: var(--primary-text-color);
+    color: var(--bg-color);
+    padding: 4em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__top {
+    width: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 1280px;
 }
 .footer__logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.footer__logo-container img {
     width: 4em;
     height: auto;
+}
+.footer__created-by-text {
+    font-size: clamp(1rem, 0.959rem + 0.2vw, 1.2rem);
+    margin: 0.8em 0 0 0.4em;
+    color: var(--dark-gray);
+}
+
+.footer__links-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6em;
 }
 .footer__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    gap: .4em;
+    gap: .6em;
 }
 .footer-list__title {
     font-family: var(--rr-font);
-    font-size: clamp(1.5rem, 1.444rem + 0.28vw, 2rem);
+    font-size: clamp(1.2rem, 1.119rem + 0.41vw, 1.6rem);
     margin-bottom: 0.2em;
 }
 .footer-list__item {
-    font-size: clamp(1.4rem, 1.356rem + 0.22vw, 1.8rem);
+    font-size: clamp(1rem, 0.919rem + 0.41vw, 1.4rem);
     cursor: pointer;
+}
+
+.footer__bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    color: var(--dark-gray);
 }

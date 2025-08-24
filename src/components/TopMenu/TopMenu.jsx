@@ -24,7 +24,7 @@ function TopMenu() {
 
                 <div className="top-menu__right">
                     <BaseButton title={"Get App"} type={"blue-bg"}/>
-                    <BaseButton title={theme + " Theme"} type={"no-bg"} onClick={toggleTheme} />
+                    <BaseButton title={theme} type={"no-bg"} onClick={toggleTheme} />
                 </div>
             </div>
         </nav>
