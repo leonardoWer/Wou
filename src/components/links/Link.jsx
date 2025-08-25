@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 
-function BaseLink({children, onClick, className="base-button ", type="bg"}, ref) {
+function BaseLink({children, onClick, className, type}, ref) {
 
     // const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ function BaseLink({children, onClick, className="base-button ", type="bg"}, ref)
         const handlePageScroll = (event) => {
             event.preventDefault(); // Отменяем стандартное поведение
 
-            const targetId = onClick.href;
+            const targetId = onClick.scrollTo;
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
@@ -46,11 +46,9 @@ function BaseLink({children, onClick, className="base-button ", type="bg"}, ref)
             linkProps.href = onClick.link;
             linkProps.target = onClick.target || "_blank";
             linkProps.rel = onClick.rel || "noopener noreferrer";
-            if (onClick.title) {
-                linkProps.title = onClick.title;
-            }
+            linkProps.title = onClick.hoverTitle || "";
         } else if (onClick.scrollTo) {
-            linkProps.href = `#${onClick.href}`;
+            linkProps.href = `#${onClick.scrollTo}`;
             linkProps.onClick = handlePageScroll;
         } else if (onClick.page) {
             linkProps.href = `#${onClick.page}`;

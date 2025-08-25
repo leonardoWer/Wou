@@ -7,6 +7,8 @@ import Logo from "s/assets/logo.svg?react"
 import LogoHorizontal from "s/assets/logo-horizontal.svg?react"
 import {DownloadAppLink} from "s/components/links/DownloadAppLink/DownloadAppLink.jsx";
 
+import {contactLinkElementsData, navigationLinkElementsData} from "s/data/linksData.js";
+
 function Footer() {
     return (
         <section id="contactsSection">
@@ -15,8 +17,13 @@ function Footer() {
                 <LogoHorizontal className="contacts-top__logo"/>
 
                 <div className="contacts-top__button-container">
-                    <DownloadAppLink children="Get app" type={"bg"}/>
-                    <BaseLink children="Our GitHub" onClick={{link: "https://github.com/leonardoWer/Wou-android-app"}} type={"no-bg"}/>
+                    <DownloadAppLink children="Get app"
+                                     className="base-button "
+                                     type={"bg"}/>
+                    <BaseLink children="Our GitHub"
+                              onClick={{link: "https://github.com/leonardoWer/Wou-android-app"}}
+                              className="base-button "
+                              type={"no-bg"}/>
                 </div>
             </div>
 
@@ -37,39 +44,28 @@ function Footer() {
                             <li className="footer-list__title">
                                 Explore
                             </li>
-                            <li className="footer-list__item">
-                                Home
-                            </li>
-                            <li className="footer-list__item">
-                                About
-                            </li>
-                            <li className="footer-list__item">
-                                Sport
-                            </li>
-                            <li className="footer-list__item">
-                                Plans
-                            </li>
-                            <li className="footer-list__item">
-                                Features
-                            </li>
+                            {navigationLinkElementsData.map((item, index) => (
+                                <li className="footer-list__item"
+                                    key={index}>
+                                    <BaseLink children={item.title}
+                                              onClick={item.onClick}
+                                    />
+                                </li>
+                            ))}
                         </ul>
 
                         <ul className="footer__list">
                             <li className="footer-list__title">
                                 Contacts
                             </li>
-                            <li className="footer-list__item">
-                                Vk
-                            </li>
-                            <li className="footer-list__item">
-                                Telegram
-                            </li>
-                            <li className="footer-list__item">
-                                GitHub
-                            </li>
-                            <li className="footer-list__item">
-                                Portfolio
-                            </li>
+                            {contactLinkElementsData.map((item, index) => (
+                                <li className="footer-list__item"
+                                    key={index}>
+                                    <BaseLink children={item.title}
+                                              onClick={item.onClick}
+                                    />
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
