@@ -9,11 +9,11 @@
 }
 
 .transition__left {
-    font-size: clamp(4rem, 3.556rem + 2.22vw, 8rem);
+    font-size: clamp(2rem, 1.333rem + 3.33vw, 8rem);
 }
 .transition__right {
     font-family: var(--rr-font);
-    font-size: clamp(2rem, 1.778rem + 1.11vw, 4rem);
+    font-size: clamp(1.2rem, 0.889rem + 1.56vw, 4rem);
     width: 50vw;
     display: flex;
     align-items: center;
@@ -46,9 +46,11 @@
     object-fit: contain;
 }
 
-
-@media (max-width: 780px) {
+@media (max-width: 520px) {
     .transition-container {
-        flex-direction: column;
+        height: 20vh;
+    }
+    .vertical-phones-container {
+        height: 100vh;
     }
 }

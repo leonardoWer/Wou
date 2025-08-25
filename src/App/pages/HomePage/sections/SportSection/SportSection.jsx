@@ -11,13 +11,13 @@ function SportSection() {
     const phonesContentContainerRef = useRef(null);
     const phonesContainerRef = useRef(null);
 
-    const phonesDataRef= useRef([]);
+    const phonesDataRef = useRef([]);
     const [isPhonesReady, setIsPhonesReady] = useState(false);
 
     const phoneTextContainersDataRef = useRef([]);
 
 
-    const phonesData =  [
+    const phonesData = [
         {
             title: "Тренировки",
             description: "Команда Wou активно работала над системой видео-тренировок, сгруппированных по различным частям тела и " +
@@ -44,6 +44,16 @@ function SportSection() {
         },
     ];
 
+    const phonesCnt = phonesData.length;
+    let currentPhoneIndex = phonesCnt - 1;
+
+    function updatePhoneImg(phoneEl) {
+        const nextImgSrc = phonesData[currentPhoneIndex].img ?? null;
+        if (nextImgSrc) {
+            phoneEl.src = nextImgSrc;
+        }
+    }
+
     // Функция для установки ref
     const setPhoneRef = (el, index) => {
         if (el) {
@@ -63,6 +73,7 @@ function SportSection() {
         const phoneElementsData = phonesDataRef.current;
         const phoneTextContainers = phoneTextContainersDataRef.current;
 
+        // Скрываем текст
         gsap.set(phoneTextContainers, {
             opacity: 0,
             yPercent: 20
@@ -87,30 +98,44 @@ function SportSection() {
 
         tl.to(phonesContainer, {
             x: () => getXValue(),
-            ease: "none",
+            ease: "linear",
         })
             .to(phoneElementsData.slice(0, phoneElementsData.length - 1), {
                 opacity: 0,
                 ease: "power3.out",
             }, "-=0.2")
 
+        // Оставшийся телефон
+        const lastPhoneImg = phoneElementsData[phonesCnt - 1];
+
         phoneTextContainers.reverse().forEach((phoneText, i) => {
             const phoneTextTl = gsap.timeline({
                 defaults: {
                     ease: "power2.out",
-                }
+                },
             })
 
             const fadeOut = {
                 opacity: 0,
                 yPercent: -20,
+                onComplete: () => {
+                    // Обновляем последнее фото на следующее
+                    currentPhoneIndex = (currentPhoneIndex - 1 + phonesCnt) % phonesCnt;
+
+                    updatePhoneImg(lastPhoneImg);
+                },
+                onReverseComplete: () => {
+                    // Обновляем последнее фото на следующее
+                    currentPhoneIndex = (currentPhoneIndex + 1 + phonesCnt) % phonesCnt;
+
+                    updatePhoneImg(lastPhoneImg);
+                }
             }
 
-            const delay = i * 0.5
             tl.to(phoneText, {
                 opacity: 1,
                 yPercent: 0,
-                delay: delay,
+                delay: i * 0.5,
             })
                 .to(phoneText, {
                     ...(i === phoneTextContainers.length - 1 ? {} : fadeOut), // Применяем fadeOut ко всем, кроме последнего
@@ -129,7 +154,7 @@ function SportSection() {
     return (
         <section id="sportSection">
             <div className="sport-content-container"
-                ref={contentContainer}>
+                 ref={contentContainer}>
 
                 <div className="section-text-container">
                     <div className="sport-text-container__first-line">
@@ -140,7 +165,8 @@ function SportSection() {
                     </div>
                     <div className="sport-text-container__another-lines">
                         <p className="another-lines__description">
-                            в котором есть всё, чтобы ваши занятия спортом были регулярными и продуктивными: от гибкого табата-таймера и видеотренировок до персонального календаря занятий
+                            в котором есть всё, чтобы ваши занятия спортом были регулярными и продуктивными: от гибкого
+                            табата-таймера и видеотренировок до персонального календаря занятий
                         </p>
                     </div>
                 </div>
@@ -149,7 +175,7 @@ function SportSection() {
                      ref={phonesContentContainerRef}>
 
                     <div className="sport__phones-container"
-                        ref={phonesContainerRef}>
+                         ref={phonesContainerRef}>
                         {phonesData.map((phone, index) => (
                             <img key={index}
                                  ref={(el) => setPhoneRef(el, index)}

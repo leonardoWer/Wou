@@ -29,6 +29,7 @@
 
 .sport__phones-content-container {
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,10 +55,9 @@
 
 .sport-phones-container__text-container {
     position: absolute;
-    top: 0;
-    right: 30%;
+    top: 40%;
+    right: 20%;
     width: 25vw;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -83,10 +83,7 @@
         margin-left: 100vw;
     }
     .sport-phones-container__text-container {
-        top: 0;
-        right: 0;
-        left: 50%;
-        translate: -50% -50%;
+        right: 10%;
         width: 80vw;
     }
 }
