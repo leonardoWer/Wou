@@ -1,21 +1,219 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wou | Workout android app</title>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f7">
+  <meta name="description" content="Wou для Android. Собирайте тренировки, ведите календарь занятий и сохраняйте личные рекорды.">
+  <title>Wou — Тренируйся в своём ритме</title>
+  <link rel="icon" href="./img/app/wou.webp" type="image/webp">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./vendor/gsap.min.js" defer></script>
+  <script src="./vendor/ScrollTrigger.min.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержанию</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Основная навигация">
+      <a class="brand" href="#top" aria-label="Wou, в начало"><img src="./img/app/wou.webp" width="34" height="34" alt=""><span class="brand-word">Wou</span></a>
+      <details class="nav-menu">
+        <summary aria-controls="section-links">Разделы <span aria-hidden="true">⌄</span></summary>
+      </details>
+      <div class="nav-links" id="section-links">
+        <a href="#about">О нас</a>
+        <details class="training-menu">
+          <summary>Для тренировок <span class="menu-chevron" aria-hidden="true"></span></summary>
+          <div class="training-menu-links">
+            <a href="#training">Тренировки</a>
+            <a href="#combo">Wou Комбо</a>
+            <a href="#calendar">Календарь и рекорды</a>
+            <a href="#progress">Прогресс</a>
+          </div>
+        </details>
+        <a href="#profile">Профиль</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+      <a class="button button-small" href="#start">Wou для Android</a>
+    </nav>
+  </header>
 
-    <!--  favicon  -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-visual" data-hero>
+        <div class="hero-sticky">
+          <div class="hero-light" aria-hidden="true"></div>
+          <h1 id="hero-title">Wou</h1>
+          <div class="phone hero-phone">
+            <img src="./img/screens/home.webp" alt="Главный экран Wou с плитками тренировок и нижней панелью" fetchpriority="high" width="540" height="1138">
+            <div class="launch-cover" aria-hidden="true"><img src="./img/app/wou.webp" alt="" width="64" height="64"></div>
+          </div>
+          <a class="hero-next" href="#about">О приложении <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" crossorigin src="/Wou/assets/index-CENeJGLH.js"></script>
-    <link rel="stylesheet" crossorigin href="/Wou/assets/index-DMTFEdE8.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+    <section class="section wrap about" id="about" aria-labelledby="about-title">
+      <p class="eyebrow">О нас</p>
+      <h2 id="about-title" data-words>Тренируйся в своём ритме</h2>
+      <div class="about-copy">
+        <p>Мы создали Wou, чтобы было проще начать заниматься спортом и возвращаться к тренировкам. Для занятия дома, в зале или на площадке можно подобрать упражнения под свой уровень, сохранить их в тренировку и открыть её снова в нужный день.</p>
+        <p>Когда хочется разнообразия, Комбо подберёт упражнения по заданным параметрам. Для интервальной тренировки есть Табата с настройкой времени работы, отдыха и числа кругов.</p>
+        <p>Записывай занятия в календарь, сравнивай личные рекорды и проходи челленджи. Так в одном приложении видно, с чего ты начал, что уже получается и на чём хочется сосредоточиться дальше.</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="training" aria-labelledby="training-title">
+      <div class="section-intro">
+        <p class="eyebrow">Для тренировок</p>
+        <h2 id="training-title" data-words>От первого подхода до своей программы</h2>
+        <p>Собери тренировку из упражнений или настрой комбо, чтобы Wou подобрал их по твоим параметрам.</p>
+      </div>
+      <div class="training-scene scroll-deck" data-deck>
+        <div class="training-window deck-panel">
+          <div class="training-rail">
+            <article class="training-card" data-slide>
+              <div><img class="training-icon" src="./img/app/my_workouts_3d.png" alt="" width="96" height="96" loading="lazy"><h3>Мои тренировки</h3><p>Добавляй упражнения, задавай повторения и время, сохраняй готовые тренировки.</p></div>
+              <div class="phone"><img src="./img/screens/workouts.webp" alt="Список своих тренировок в Wou" width="540" height="1138" loading="lazy"></div>
+            </article>
+            <article class="training-card" data-slide>
+              <div><img class="training-icon" src="./img/app/combo_3d.png" alt="" width="96" height="96" loading="lazy"><h3>Комбо</h3><p>Выбери параметры, чтобы собрать тренировку из подходящих упражнений.</p></div>
+              <div class="phone"><img src="./img/screens/combo.webp" alt="Экран Комбо в Wou" width="540" height="1138" loading="lazy"></div>
+            </article>
+            <article class="training-card" data-slide>
+              <div><img class="training-icon" src="./img/app/tabata_3d.png" alt="" width="96" height="96" loading="lazy"><h3>Табата</h3><p>Задай время работы и отдыха, количество подходов и циклов.</p></div>
+              <div class="phone"><img src="./img/screens/tabata.webp" alt="Настройка интервалов в таймере Wou" width="540" height="1138" loading="lazy"></div>
+            </article>
+          </div>
+          <div class="training-nav" role="group" aria-label="Выбрать экран тренировки">
+            <button type="button" data-slide-go="0" aria-pressed="true">Тренировки</button>
+            <button type="button" data-slide-go="1" aria-pressed="false">Комбо</button>
+            <button type="button" data-slide-go="2" aria-pressed="false">Табата</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap combo-feature" id="combo" aria-labelledby="combo-title" data-combo>
+      <div class="combo-stage">
+        <canvas class="combo-wave" aria-hidden="true"></canvas>
+        <div class="combo-content">
+          <div class="combo-title">
+            <p class="eyebrow">Подбор тренировок</p>
+            <h2 id="combo-title">Wou Комбо</h2>
+            <p>Тренировка под твой темп, инвентарь и группы мышц.</p>
+          </div>
+          <div class="combo-cards">
+            <article>
+              <h3>Выбери нагрузку</h3>
+              <p>Задай число упражнений, время работы и пауз. Wou сразу покажет примерную продолжительность.</p>
+            </article>
+            <article>
+              <h3>Укажи, что есть под рукой</h3>
+              <p>Выбери инвентарь и группы мышц. Можно подобрать занятие по готовой подборке.</p>
+            </article>
+            <article>
+              <h3>Запусти тренировку</h3>
+              <p>Комбо подберёт упражнения по параметрам, а таймер проведёт по интервалам работы и отдыха.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section progress wrap" id="calendar" aria-labelledby="progress-title">
+      <div class="section-intro">
+        <p class="eyebrow">Прогресс</p>
+        <h2 id="progress-title" data-words>Замечай, как далеко ты зашёл</h2>
+      </div>
+      <div class="progress-scene scroll-deck" data-deck>
+      <div class="progress-layout deck-panel">
+        <div class="progress-list">
+          <article class="progress-step" data-slide>
+            <img src="./img/app/calendar_3d.png" alt="" width="72" height="72" loading="lazy">
+            <h3><button type="button" data-slide-go="0" disabled>Календарь</button></h3>
+            <p>Планируй следующие занятия и отмечай завершённые, чтобы видеть историю тренировок.</p>
+          </article>
+          <article class="progress-step" data-slide>
+            <img src="./img/app/records_3d.png" alt="" width="72" height="72" loading="lazy">
+            <h3><button type="button" data-slide-go="1" disabled>Личные рекорды</button></h3>
+            <p>Записывай лучшие результаты по упражнениям и группируй их по своим категориям.</p>
+          </article>
+          <article class="progress-step" data-slide>
+            <img src="./img/app/challenges_3d.png" alt="" width="72" height="72" loading="lazy">
+            <h3><button type="button" data-slide-go="2" disabled>Челленджи</button></h3>
+            <p>Открывай задания и получай награды за пройденные уровни.</p>
+          </article>
+        </div>
+        <div class="progress-stage" data-progress-stage>
+          <figure class="phone"><img src="./img/screens/calendar.webp" alt="Календарь занятий Wou" width="540" height="1138" loading="lazy"></figure>
+          <figure class="phone"><img src="./img/screens/records.webp" alt="Раздел личных рекордов Wou" width="540" height="1138" loading="lazy"></figure>
+          <figure class="phone"><img src="./img/screens/challenges.webp" alt="Список челленджей Wou" width="540" height="1138" loading="lazy"></figure>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <div class="white-band">
+      <section class="section wrap profile-showcase" id="profile" aria-labelledby="profile-title">
+        <div class="section-intro">
+          <p class="eyebrow">Профиль</p>
+          <h2 id="profile-title">Профиль и прогресс</h2>
+          <p>Твои цели, награды и статистика тренировок в одном месте.</p>
+        </div>
+        <div class="profile-grid" id="progress">
+          <article>
+            <h3>Твой профиль</h3>
+            <p>Поставь цель, добавляй фото с занятий и делись профилем по ссылке или QR-коду.</p>
+            <figure class="profile-screen"><img src="./img/screens/profile.webp" alt="Профиль спортсмена в Wou" width="540" height="1138" loading="lazy"></figure>
+          </article>
+          <article>
+            <h3>Достижения</h3>
+            <p>Проходи этапы челленджей и собирай награды в профиле.</p>
+            <figure class="profile-screen"><img src="./img/screens/achievements.webp" alt="Полученные достижения в Wou" width="540" height="1138" loading="lazy"></figure>
+          </article>
+          <article>
+            <h3>Статистика</h3>
+            <p>Смотри, сколько тренировок ты прошёл и сколько времени занимался.</p>
+            <figure class="profile-screen"><img src="./img/screens/stats.webp" alt="Статистика тренировок в Wou" width="540" height="1138" loading="lazy"></figure>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap gallery-showcase" id="gallery" aria-label="Галерея экранов Wou">
+        <div class="manifesto" data-manifesto aria-label="Wou — приложение, сделанное с любовью к спорту. Рекорды начинаются здесь.">
+          <div class="manifesto-sticky" aria-hidden="true">
+            <span class="manifesto-brand">Wou</span>
+            <p class="manifesto-line">Приложение, сделанное с любовью к спорту</p>
+          </div>
+        </div>
+        <div class="vertical-phones-container" data-cascade>
+          <div class="vertical-phone__wrapper"><div class="phone framed-phone"><img src="./img/screens/profile.webp" alt="Профиль в Wou" width="540" height="1138" loading="lazy"></div></div>
+          <div class="vertical-phone__wrapper"><div class="phone framed-phone"><img src="./img/screens/workouts.webp" alt="Тренировки в Wou" width="540" height="1138" loading="lazy"></div></div>
+          <div class="vertical-phone__wrapper"><div class="phone framed-phone"><img src="./img/screens/tabata.webp" alt="Таймер Табата в Wou" width="540" height="1138" loading="lazy"></div></div>
+        </div>
+        <a class="button gallery-cta" href="./gallery.html">Открыть галерею экранов <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="start wrap" id="start" aria-labelledby="start-title">
+      <div>
+        <p class="eyebrow">Wou для Android</p>
+        <h2 id="start-title">Начни с одной тренировки</h2>
+        <p>Обновления и новости Wou для Android выходят в Telegram.</p>
+        <a class="button" href="https://t.me/woumobileapp">Открыть Telegram-канал <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="profile-screen start-screen"><img src="./img/screens/tabata-running.webp" width="540" height="1138" alt="Таймер Wou во время тренировки" loading="lazy"></figure>
+      </section>
+    </div>
+  </main>
+  <footer class="footer wrap" id="contacts">
+    <a class="brand" href="#top" aria-label="Wou, в начало"><img src="./img/app/wou.webp" width="34" height="34" alt="">Wou</a>
+    <div class="contact-links" aria-label="Контакты">
+      <a href="https://github.com/leonardoWer/Wou">GitHub <span aria-hidden="true">↗</span></a>
+      <a href="https://t.me/woumobileapp">Telegram <span aria-hidden="true">↗</span></a>
+      <a href="https://leonardower.github.io/">Сайт разработчика <span aria-hidden="true">↗</span></a>
+      <a href="mailto:leonardoWer16@gmail.com">leonardoWer16@gmail.com</a>
+    </div>
+  </footer>
+</body>
 </html>
